@@ -17,6 +17,8 @@ This configuration is not production ready. Use only for local development.
 * For start - ```make up```
 * For stop - ```make down```
 
+App starts at [http://127.0.0.1](http://127.0.0.1)
+
 ### Configure
 Configuration is present in .env file
 ```env
@@ -38,4 +40,11 @@ MYSQL_USER=user
 MYSQL_PASSWORD=password
 MYSQL_ROOT_PASSWORD=password
 MYSQL_DATABASE=app_db
+```
+
+# Installation example
+```bash
+$ git clone git@github.com:miroslav-chandler/docker-web-template.git
+$ cd docker-web-template/
+$ make up
 ```
