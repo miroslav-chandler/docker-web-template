@@ -26,6 +26,11 @@ services:
       - ./.docker/mysql/data:/var/lib/mysql
     ports:
       - ${MYSQL_LOCAL_PORT}:${MYSQL_REMOTE_PORT}
+    environment:
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
 
   redis:
     container_name: ${COMPOSE_PROJECT_NAME}_redis
