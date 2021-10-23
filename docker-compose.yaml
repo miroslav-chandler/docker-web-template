@@ -26,8 +26,6 @@ services:
       - ./.docker/mysql/data:/var/lib/mysql
     ports:
       - ${MYSQL_LOCAL_PORT}:${MYSQL_REMOTE_PORT}
-    env_file:
-      - .env
 
   redis:
     container_name: ${COMPOSE_PROJECT_NAME}_redis
